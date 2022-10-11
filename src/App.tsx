@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Flex, Box } from 'reflexbox';
-import {TimeTrackingReport} from './TimeTrackingReport';
+import {TimeTrackingReport} from '@stevenwcarter/time-tracking-components';
 
 function App() {
     const [source, setSource] = useState('');
