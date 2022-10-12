@@ -1,0 +1,69 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "globals": {
+	"JSX": true,
+	"HTMLElement": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "stylelint",
+    "plugin:react/jsx-runtime"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "printWidth": 100
+      }
+    ],
+	"@typescript/no-explicit-any": 0,
+	"node/no-missing-import": ["error", {
+		"allowModules": ["obsidian"],
+		"resolvePaths": ["src", "node_modules"],
+		"tryExtensions": [".ts", ".tsx", ".node", ".js", ".json"]
+	}],
+	"node/no-unpublished-import": ["error", {
+		"allowModules": ["obsidian"]
+	}],
+	"sort-imports": 0,
+    "no-unused-vars": "off",
+	"no-console": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-prototype-builtins": "off",
+    "@typescript-eslint/no-empty-function": "off"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}
